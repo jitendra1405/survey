@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<?php include 'header.php';?>
 <html>
    <!--/////////////////Head Include/////////-->
-   <?php include 'header.php';?>
+   
    <!--/////////////////////////////////////-->
    <body>
       <section id="login-section">
@@ -15,6 +15,7 @@
 	  
 	  
       <!--///////////////////////Footer Include//////////////////////////////-->
-      <?php include 'footer.php';?>
+      
    </body>
 </html>
+<?php include 'footer.php';?>
