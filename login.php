@@ -65,7 +65,7 @@
 				
                             }
 		   
-			   echo $num_rows;	
+			   echo "$num_rows Rows\n";	
 		                
 		                
                             pg_close($dbconn); 
