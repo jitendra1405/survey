@@ -45,11 +45,11 @@
         abc();
     }
 	   function abc(){
-                     $sql = "select firstname from contact.contact where email = 'jitendra@gmail.com'";
+                     $sql = "select firstname from contact.contact";
 			    echo 'hello';
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
-                                $size = count($row);
+                                
 				  echo '<tr>
                                         <td>'.$row[0].'</td>
                                         
