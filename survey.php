@@ -133,7 +133,8 @@
 				
                             }
 	                   while($row1 = pg_fetch_array($resultset1)) {
-                                echo '<tr>
+                                echo 'this is from new query';
+				   echo '<tr>
                                         <td>'.$row1[0].'</td>
                                         
                                     </tr>'; 
