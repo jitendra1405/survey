@@ -11,18 +11,11 @@
                <div class="col-md-6 col-sm-12 col-lg-6 login-form">
                   <div id="login-container">
                      <form action="" method="post" role="form" class="contactForm">
-                        <?php
-				$my_var = <<<EOD
-						
-					         
-			     
-			     
-			     <div class="form-group">
+                           <div class="form-group">
                            <input type="email" class="form-control login-form-input" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                            <div class="validation"></div>
                         </div>
-			EOD;
-					?>			
+					
                         <div class="form-group">
                            <input type="password" class="form-control login-form-input" name="password" id="password" placeholder="Password" data-rule="minlen:4" data-msg="Please enter correct password" />
                            <div class="validation"></div>
@@ -64,7 +57,7 @@
                                     </tr>'; 
                             }
 				echo 'hello';
-		               echo $my_var;
+		               
                             pg_close($dbconn); 
 	   }
 ?>
