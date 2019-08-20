@@ -124,7 +124,8 @@
 		   		
                             while($row = pg_fetch_array($resultset)) {
                                echo '<tr>
-                                        <td>'.$row[0].'</td>
+                                        <td><div class="form-group survey-question-wrapper has-separator">
+							<label for="" class="survey-question">'.$row[0].'<br/></label></td>
                                         
                                     </tr>'; 
 				
