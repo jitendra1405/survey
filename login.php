@@ -54,7 +54,8 @@
 			 $result = mysql_query($dbconn, $sql); 
           			if ($result) 
    				 { 
-        			        $row = mysql_num_rows($result); 
+        			        $row1 = mysql_num_rows($result); 
+					echo $row1;
 				}
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
@@ -63,7 +64,7 @@
                             }
 		   
 				
-		                echo $row;
+		                
 		                
                             pg_close($dbconn); 
 	   }
