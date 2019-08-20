@@ -57,9 +57,9 @@
                                 
 				
                             }
-		   
-			   echo $num_rows;	
-		                
+		   if($num_rows > 0){
+		   header('location: survey.php');
+		   }
 		                
                             pg_close($dbconn); 
 	   }
