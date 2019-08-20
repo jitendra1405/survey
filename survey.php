@@ -120,7 +120,7 @@
 	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
 			
                      $sql = "select SFID,Question_1__c from contact.question__c";
-	             $sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c where Question__c = 'a033i000003xbSTAAY'";
+	             $sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c ";
                             $resultset = pg_query($dbconn, $sql);
 	   		    $resultset1 = pg_query($dbconn, $sql1);
 		   		
