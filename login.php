@@ -38,24 +38,30 @@
             </div>
          </div>
       </section>
-	  <?php
+	 <?php
+class DB_Connect
+{
+    public function connect()
+    {
+      $host = "ec2-54-225-72-238.compute-1.amazonaws.com";
+      $user = "oyymgxywhiwmff";
+      $password = "5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3";
+      $dbname = "d1mbimqnj4bo69";
+      $port = "5432";
 
-   $con = "dbname=d1mbimqnj4bo69 host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3 sslmode=require";
 
+      $db = pg_connect( " $url $host $port $dbname $credentials"  );
+      if(!$db){
+         echo "Error : Unable to open database\n";
+      } else {
+         echo "Opened database successfully\n";
+      }
+      return $db;
+    }
+}
+$db1 = new DB_Connect();
+    $conn = $db1->connect();
 
-   if (!$con) 
-   {
-     echo "Database connection failed.";
-   }
-   else 
-   {
-     echo "Database connection success.";
-    
-	$sql = "select FirstName from contact.contact";
-
-                            $resultset = pg_query($con, $sql);
-                            echo $resultset;
-   }
     
 ?>
    </body>
