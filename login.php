@@ -46,7 +46,7 @@
     }
 	   function abc(){
                      $sql = "select firstname from contact.contact";
-			    echo 'hello';
+			    
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
                                 
@@ -55,7 +55,7 @@
                                         
                                     </tr>'; 
                             }
-
+				echo 'hello';
                             pg_close($dbconn); 
 	   }
 ?>
