@@ -59,7 +59,7 @@
                             }
 		   if($num_rows > 0){
 		   header('location: survey.php');
-		   }else{ echo 'Please enter the correct username and password';
+		   }else{ echo "Please enter the correct username and password";}
 		                
                             pg_close($dbconn); 
 	   }
