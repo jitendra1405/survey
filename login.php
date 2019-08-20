@@ -45,7 +45,7 @@
         abc();
     }
 	   function abc(){
-                     $sql = "select firstname from contact.contact where email = '$email'";
+                     $sql = "select firstname from contact.contact where email = 'jitendra@gmail.com'";
 			    echo 'hello';
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
