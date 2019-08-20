@@ -46,7 +46,7 @@
 	   function abc(){
 		   	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
 
-                     $sql = "select firstname from contact.contact where email=' ". $my_var. " '";
+                     $sql = "select firstname from contact.contact where email=' ".$_POST['email']. "';
 			    
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
