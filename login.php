@@ -59,14 +59,10 @@
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
                                 
-				  echo '<tr>
-                                        <td>'.$row[0].'</td>
-                                        
-                                    </tr>'; 
+				
                             }
 		   
-				echo 'hello';
-				echo $formvalue;
+				
 		                echo $row;
 		                
                             pg_close($dbconn); 
