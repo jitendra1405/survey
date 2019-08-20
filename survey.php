@@ -138,7 +138,7 @@
 				
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
-				   echo '<br/><br/><br/><tr>
+				   echo '<tr>
                                         <td>'.$row1[0].'</td>
                                         <td>'.$row1[1].'</td>
 					<td>'.$row1[2].'</td>
