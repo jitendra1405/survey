@@ -59,7 +59,7 @@
                                     </tr>'; 
                             }
 				echo 'hello';
-				echo $formvalue;
+				
 		               
                             pg_close($dbconn); 
 	   }
