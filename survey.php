@@ -119,8 +119,10 @@
        	 
 	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
 			
-                     $sql = "select Question_1__c from contact.question__c";	
+                     $sql = "select SFID,Question_1__c from contact.question__c";
+	             $sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c where Question__c = '$sql.SFID'";
                             $resultset = pg_query($dbconn, $sql);
+	   		    $resultset1 = pg_query($dbconn, $sql1);
 		   		
                             while($row = pg_fetch_array($resultset)) {
                                echo '<tr>
@@ -129,6 +131,12 @@
                                         
                                     </tr>'; 
 				
+                            }
+	                   while($row1 = pg_fetch_array($resultset1)) {
+                                echo '<tr>
+                                        <td>'.$row1[0].'</td>
+                                        
+                                    </tr>'; 
                             }
 		   
 		                
