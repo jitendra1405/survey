@@ -5,18 +5,7 @@
    <?php include 'header.php';?>
    <!--/////////////////////////////////////-->
    <body>
-   <!--Banner for company branding 
-		<section class="survey-header-banner">
-			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="company-logo">
-						Company Name
-					</div>
-				</div>
-			</div>
-		</section>-->
-   
-   
+  
       <section class="survey">
          <div class="container" >
             <div class="row">
@@ -127,21 +116,20 @@
 	  <!---Footer--->
 	 
 	    <?php
-       	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
+       	 
+	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
 			
                      $sql = "select Question_1__c from contact.question__c";	
                             $resultset = pg_query($dbconn, $sql);
 		   		
                             while($row = pg_fetch_array($resultset)) {
-                              echo '<tr>
-                                        <td>'.$row[0].'</td>
-                                        
-                                    </tr>';   
+                                
 				
                             }
 		   
+		                
                             pg_close($dbconn); 
-	   }
+	   
 ?>
    </body>
 </html>
