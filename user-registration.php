@@ -6,7 +6,7 @@ User Name: <input type='text' name='name'/><br/>
 
 Email: <input type='text' name='email'/><br/>
 Password: <input type='text' name='lname'/><br/>
-Confirm Password: <input type='text' name='lname'/><br/>
+Confirm Password: <input type='text' name='liname'/><br/>
 <input type='submit' name='use_button' value='something' />
 </form>";
 if(isset($_POST['use_button']))
