@@ -132,10 +132,10 @@
 							<label for="" class="survey-question">'.$row[1].'<br/></label></td>
                                         
                                     </tr>'; 
-				echo 'this is from new query';
+				
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
-				   echo '<tr>
+				   echo '<br/><br/><br/><tr>
                                         <td>'.$row1[0].'</td>
                                         <td>'.$row1[1].'</td>
 					<td>'.$row1[2].'</td>
