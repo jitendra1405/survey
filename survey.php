@@ -6,7 +6,7 @@
    <!--/////////////////////////////////////-->
    <body>
   
-      <section class="survey">
+     <!-- <section class="survey">
          <div class="container" >
             <div class="row">
 				<div class="col-md-12">
@@ -111,7 +111,7 @@
 				</div>
             </div>
          </div>
-      </section>
+      </section>-->
 	  
 	  <!---Footer--->
 	 
@@ -139,9 +139,9 @@
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
 				   echo '<br/><tr>
-                                        <td>'.$row1[0].'<br/></td>
-                                        <td>'.$row1[1].'<br/></td>
-					<td>'.$row1[2].'<br/></td>
+                                        <td><input class="form-check-input" type="radio" >'.$row1[0].'<br/></td>
+                                        <td><input class="form-check-input" type="radio" >'.$row1[1].'<br/></td>
+					<td><input class="form-check-input" type="radio" >'.$row1[2].'<br/></td>
 					
                                     <br/></tr>'; 
                             }
