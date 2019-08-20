@@ -138,12 +138,12 @@
 				
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
-				   echo '<tr>
+				   echo '<br/><tr>
                                         <td>'.$row1[0].'<br/></td>
                                         <td>'.$row1[1].'<br/></td>
 					<td>'.$row1[2].'<br/></td>
 					
-                                    </tr><br/>'; 
+                                    <br/></tr>'; 
                             }
 				    
                             }
