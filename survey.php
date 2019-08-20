@@ -125,14 +125,10 @@
 	   		   
 		   		
                             while($row = pg_fetch_array($resultset)) {
-				    
-                               echo '<tr>
-                                        <td><div class="form-group survey-question-wrapper has-separator">
-							<label for="" class="survey-question">'.$row[1].'<br/></label></td>
-                                        
-                                    </tr>'; 
 				$sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c where question__c ='$row[0]'";
-					    $resultset1 = pg_query($dbconn, $sql1);
+					    $resultset1 = pg_query($dbconn, $sql1);    
+                               
+				
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
 				   echo '<br/><br/><br/><tr>
@@ -142,6 +138,11 @@
 					
                                     </tr>'; 
                             }
+				    echo '<tr>
+                                        <td><div class="form-group survey-question-wrapper has-separator">
+							<label for="" class="survey-question">'.$row[1].'<br/></label></td>
+                                        
+                                    </tr>'; 
                             }
 	             
 		   
