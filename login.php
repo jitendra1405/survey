@@ -50,7 +50,7 @@
 			$formvalue = $_POST['email'];
 		        $formvalue1 = $_POST['password'];
                      $sql = "select firstname from contact.contact where email='$formvalue' AND Lastname='$formvalue1'";
-			    
+			$num_rows = mysql_num_rows($sql);    
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
                                 
@@ -61,6 +61,7 @@
                             }
 				echo 'hello';
 				echo $formvalue;
+		                echo $num_rows;
 		               
                             pg_close($dbconn); 
 	   }
