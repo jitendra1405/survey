@@ -10,7 +10,7 @@
             <div class="row">
                <div class="col-md-6 col-sm-12 col-lg-6 login-form">
                   <div id="login-container">
-                     <form action="theSamePage.php" method="post" role="form" class="contactForm">
+                     <form action="login.php" method="post" role="form" class="contactForm">
                            <div class="form-group">
 				   
                            <input type="email" class="form-control login-form-input" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
