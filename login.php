@@ -59,9 +59,7 @@
                                         
                                     </tr>'; 
                             }
-		   if($size > 0){
-		   header('location: survey.php');
-		   }
+		   
 				echo 'hello';
 				echo $formvalue;
 		                echo $num_rows;
