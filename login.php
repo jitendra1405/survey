@@ -26,9 +26,9 @@
 						  <label class="form-check-label" for="KeepSignin">Keep me sign in</label>
 						</div>
 						
-						<div class="form-group">
-                        <button type="submit" title="Send Message" class="login-button" onclick="abc()">Login</button>
-						</div>
+						<form action="theSamePage.php" method="post">
+    								<input type="submit" name="someAction" value="GO" />
+						</form>
                      </form>
 
                   </div>
@@ -40,7 +40,10 @@
       </section>
 	 <?php
 	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
-
+		if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
+    {
+        abc();
+    }
 	   function abc(){
                      $sql = "select firstname from contact.contact where email = '$email'";
 			    echo 'hello';
