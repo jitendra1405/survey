@@ -120,19 +120,19 @@
 	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
 			
                      $sql = "select SFID,Question_1__c from contact.question__c";
-	             $sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c where question__c = 'a033i000003xbSTAAY'";
+	           
                             $resultset = pg_query($dbconn, $sql);
-	   		    $resultset1 = pg_query($dbconn, $sql1);
+	   		   
 		   		
                             while($row = pg_fetch_array($resultset)) {
+				    $sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c where question__c = $row[0]";
+					    $resultset1 = pg_query($dbconn, $sql1);
                                echo '<tr>
                                         <td><div class="form-group survey-question-wrapper has-separator">
 							<label for="" class="survey-question">'.$row[1].'<br/></label></td>
                                         
                                     </tr>'; 
-				
-                            }
-	             echo 'this is from new query';
+				echo 'this is from new query';
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
 				   echo '<tr>
@@ -142,6 +142,8 @@
 					
                                     </tr>'; 
                             }
+                            }
+	             
 		   
 		                
                             pg_close($dbconn); 
