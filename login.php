@@ -45,7 +45,10 @@ $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 d
                             $resultset = pg_query($dbconn, $sql);
                             while($row = pg_fetch_array($resultset)) {
                                 $size = count($row);
-				   echo $size;
+				  echo '<tr>
+                                        <td>'.$row[0].'</td>
+                                        
+                                    </tr>'; 
                             }
 
                             pg_close($dbconn);   
