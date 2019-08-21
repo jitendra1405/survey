@@ -143,18 +143,15 @@
                                         <td><input  type="radio" name="status[' . $row[0] . ']">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status[' . $row[0] . ']">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status[' . $row[0] . ']" >'.$row1[2].'<br/></td>
-					
+					<input type="submit" value="Result" name="Result"> //This button opens Result.php
                                     <br/></tr>
 				    </form>
-				    <form method="GET">
-    					<input type="submit" value="Result" name="Result"> //This button opens Result.php
-				     <form>';
+				    ';
 				   $radioVal = $_POST["status[' . $row[0] . ']"];
-				   if($radioVal == "Good")
+				   if(isset($_POST['use_button']))
 					{
-   					 echo("You chose the first button. Good choice. :D");
-					}
-				 
+					   echo $radioVal;
+				   }
                             }
 				    
                             }
