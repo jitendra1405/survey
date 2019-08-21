@@ -149,7 +149,7 @@
 				    </form>
 				    ';
 				   		   
-				   $radioVal = $_POST['status_$i'];
+				   $radioVal = $_POST["status"];
                             	if(isset($_POST['Result'])){
 			     		echo $radioVal;
 			     }	
