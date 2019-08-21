@@ -158,7 +158,7 @@
 			  }
                            
 	                 
-	  			 if(isset($_POST['Result']))
+	  			 if(isset($_POST['Result'])){
 			     		echo $abc;
 			     }	 
 	   
