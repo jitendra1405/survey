@@ -118,12 +118,13 @@
 	    <?php
        	 
 	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
-			$radioVal;
+			
                      $sql = "select SFID,Question_1__c from contact.question__c";
 	           
                             $resultset = pg_query($dbconn, $sql);
 	   		   
-		            $num_rows = pg_num_rows($resultset); 
+		            $num_rows = pg_num_rows($resultset);
+	   		  
                             while($row = pg_fetch_array($resultset)) {
 				    
 				    echo '<tr>
@@ -135,7 +136,7 @@
 				$sql1 = "select Option_1__c,Option_2__c,Option_3__c from contact.Option__c where question__c ='$row[0]'";
 					    $resultset1 = pg_query($dbconn, $sql1);    
                                
-				
+				$num_rows = pg_num_rows($resultset);
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                  
 				   echo '<form method="POST">
@@ -143,24 +144,21 @@
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
-					<input type="submit" value="Result" name="c">
+					<input type="submit" value="Result" name="Result">
                                     <br/></tr>
 				    </form>
 				    ';
 				   		   
 				   $radioVal = $_POST["status"];
-				   
-                            	if(isset($_POST['Result']))
-				{
-					echo $radioVal;
-				}
+                            	if(isset($_POST['Result'])){
+			     		echo $radioVal;
+			     }	
 				    
                             }
 	             
 			  }
-			    
-		            
-	   		    
+	                   
+		             
                             pg_close($dbconn); 
 	   
 ?>
