@@ -26,20 +26,7 @@
   <link href="css/media-query.css" rel="stylesheet">
   <link href="css/custom-color.css" rel="stylesheet">
 </head>
-<style>
-.reg-button{
-	    background: #000;
-    color: #fff;
-    padding: 8px 10px 8px 10px;
-	font-size: 12px;
-}
-.login-button{
-	background: #2196F3;
-    color: #fff;
-       padding: 8px 20px 8px 20px;
-    font-size: 12px;
-}
-</style>
+
   <!--==========================
   Header
   ============================-->
