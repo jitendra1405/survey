@@ -151,14 +151,14 @@
 				   		   
 				   $radioVal = $_POST["status"];
 				   $abc = $radioVal;
-                            	if(isset($_POST['Result'])){
-			     		echo $abc;
-			     }	 
+                            	
 				    
                             }
 	             
 			  }
-	                  
+	                  if(isset($_POST['Result'])){
+			     		echo $abc;
+			     }	 
 		            
                             pg_close($dbconn); 
 	   
