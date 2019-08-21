@@ -124,7 +124,7 @@
                             $resultset = pg_query($dbconn, $sql);
 	   		   
 		            $num_rows = pg_num_rows($resultset);
-	   		  
+	   		    
                             while($row = pg_fetch_array($resultset)) {
 				    
 				    echo '<tr>
@@ -148,10 +148,10 @@
                                     <br/></tr>
 				   </form>
 				    ';
-				   		   
-				   $radioVal = $_POST["status"];
+				   	for($i=0;$i<$num_rows;$i++){	   
+				   $radioVal = $_POST["status"][$i];
 				   $abc = $radioVal;
-                            	
+					}
 				    
                             }
 	             
