@@ -158,19 +158,19 @@
 	             		$radioVal = $_POST["status"];
 				   $abc = $radioVal;
 			  }
-              if(isset($_POST['Result'])){
-					 foreach($_POST['status'] as $option_num => $option_val){
-                                            echo $option_num." ".$option_val."<br>";
-					 echo 'Heloooooooooooooooooo';
-					 }
-			     		
-			     }	               
+             
  }
 	   
 		   
 	             
 	   
-	   
+	    if(isset($_POST['Result'])){
+					 foreach($_POST['status'] as $value){
+                                            echo $value"<br>";
+					 echo 'Heloooooooooooooooooo';
+					 }
+			     		
+			     }	               
 	   
 	  			
 	   
