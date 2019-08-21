@@ -2,7 +2,7 @@
 <html>
    <title>User Login</title>
    <!--/////////////////Head Include/////////-->
-   <?php include 'header.php';?>
+   
    <!--/////////////////////////////////////-->
    <body class="login">
       <section id="login-section">
