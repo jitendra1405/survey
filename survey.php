@@ -116,9 +116,9 @@
 	  <!---Footer--->
 	 
 	    <?php
-       	 
+       	    
 	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
-			
+			$radioVal = 'kkkk';
                      $sql = "select SFID,Question_1__c from contact.question__c";
 	           
                             $resultset = pg_query($dbconn, $sql);
@@ -144,21 +144,21 @@
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
-					<input type="submit" value="Result" name="Result">
+					
                                     <br/></tr>
 				    </form>
 				    ';
 				   		   
 				   $radioVal = $_POST["status"];
-                            	if(isset($_POST['Result'])){
-			     		echo $radioVal;
-			     }	
+                            	
 				    
                             }
 	             
 			  }
-	                   
-		             
+	                   echo '<form method="POST"><input type="submit" value="Result" name="Result">';
+		            if(isset($_POST['Result'])){
+			     		echo $radioVal;
+			     }	 
                             pg_close($dbconn); 
 	   
 ?>
