@@ -168,7 +168,7 @@
 ?>
 	 
 	   
-<form method="POST"><input type="submit" value="Result" name="Result"></form>	   
+	   
 	
 <button id="upload_widget" class="cloudinary-button">Upload files</button>
   
@@ -198,7 +198,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	   
 	   
 	   
-	   
+	<form method="POST"><input type="submit" value="Result" name="Result"></form>   
 	   
 	   
    </body>
