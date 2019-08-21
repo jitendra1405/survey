@@ -150,7 +150,7 @@
 				   $radioVal = $_POST["status[' . $row[0] . ']"];
 				   if(isset($_POST['use_button']))
 					{
-					   echo $radioVal;
+					    echo("You chose the first button. Good choice. :D");
 				   }
                             }
 				    
