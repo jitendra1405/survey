@@ -139,9 +139,9 @@
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                 
 				   echo '<br/><tr>
-                                        <td><input  type="radio" name="gender">'.$row1[0].'<br/></td>
-                                        <td><input  type="radio" name="gender">'.$row1[1].'<br/></td>
-					<td><input  type="radio" name="gender">'.$row1[2].'<br/></td>
+                                        <td><input  type="radio" name='.$row1[0].'>'.$row1[0].'<br/></td>
+                                        <td><input  type="radio" name='.$row1[0].'>'.$row1[1].'<br/></td>
+					<td><input  type="radio" name='.$row1[0].'>'.$row1[2].'<br/></td>
 					
                                     <br/></tr>'; 
                             }
