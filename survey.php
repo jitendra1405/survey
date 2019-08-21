@@ -27,20 +27,21 @@
         <div class="well well-sm">
             <div class="radio">
                 <label>
-                <input type="radio" name="optradio[<?php echo $i; ?>]" value="' . $row1[0] . '"><?php echo $row1[0]; ?></label>
+                <input type="radio" name="optradio[<?php echo $i; ?>]" value="a"><?php echo $row1[0]; ?></label>
             </div>
             <div class="radio">
                 <label>
-                <input type="radio" name="optradio[<?php echo $i; ?>]" value="' . $row1[1] . '"><?php echo $row1[1]; ?></label>
+                <input type="radio" name="optradio[<?php echo $i; ?>]" value="b"><?php echo $row1[1]; ?></label>
             </div>
             <div class="radio">
                 <label>
-                <input type="radio" name="optradio[<?php echo $i; ?>]" value="' . $row1[2] . '"><?php echo $row1[2]; ?></label>
+                <input type="radio" name="optradio[<?php echo $i; ?>]" value="c"><?php echo $row1[2]; ?></label>
             </div>
         </div>
         <?php
     }
     }
+			    }
     ?>
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	
