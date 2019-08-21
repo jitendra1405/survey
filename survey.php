@@ -165,7 +165,7 @@
 	             
 	   
 	    if(isset($_POST['Result'])){
-					 foreach($_POST['status'] as $value){
+					 foreach($status as $value){
                                             echo $value"<br>";
 					 echo 'Heloooooooooooooooooo';
 					 }
