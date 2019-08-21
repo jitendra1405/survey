@@ -1,9 +1,25 @@
 <?php include 'header.php';?>
 <html>
    <!--/////////////////Head Include/////////-->
-   
+   <style>
+	#survey-intro {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    background: #f5f8fd url(../img/intro-bg.jpg) center top no-repeat;
+    background-size: cover;
+}
+   </style>
    <!--/////////////////////////////////////-->
    <body>
+   <section id="survey-intro" class="clearfix">
+    <div class="container d-flex h-100">
+      
+
+    </div>
+  </section>
+   
+   
       <section id="login-section">
          <div class="container">
             <div class="row">
