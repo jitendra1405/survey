@@ -150,10 +150,10 @@
     					<input type="submit" value="Result" name="Result"> //This button opens Result.php
 				     <form>';
 				   $radioVal = $_POST["status[' . $row[0] . ']"];
-				   if(isset($_POST['Result']))
+				   if($radioVal == "Good")
 					{
-					echo $radioVal;
-				   }
+   					 echo("You chose the first button. Good choice. :D");
+					}
 				 
                             }
 				    
