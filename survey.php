@@ -10,8 +10,10 @@
 	   		   
 		            $num_rows = pg_num_rows($resultset);
 	   		  
-                            while($row = pg_fetch_array($resultset)) {
-   
+                           
+				    
+		for($i=1;$i<=$num_rows;$i++){
+   			$row = pg_fetch_array($resultset)
         ?>
         <div class="well well-sm well-primary">
             <input type="hidden" name="ques"/><?php echo $row[1]; ?>
@@ -23,8 +25,7 @@
 				
 	                   while($row1 = pg_fetch_array($resultset1)) {
 				   
-				    for($i=1;$i<=3;$i++)
-    {
+				    
 				   ?>
         <div class="well well-sm">
             <div class="radio">
@@ -43,7 +44,7 @@
         <?php
     }
     }
-			    }
+			    
     ?>
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	
