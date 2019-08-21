@@ -143,9 +143,9 @@
                                  
 				   echo '<form method="POST">
 				        <br/><tr>
-                                        <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
-                                        <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
-					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
+                                        <td><input  type="radio" name="status[$i]" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
+                                        <td><input  type="radio" name="status[$i]" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
+					<td><input  type="radio" name="status[$i]" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
 					
                                     <br/></tr>
 				   </form>
@@ -160,6 +160,12 @@
 			  }
                            
  }
+	   
+	             foreach($_POST['status'] as $option_num => $option_val)
+                      echo $option_num." ".$option_val."<br>";
+	   
+	   
+	   
 	  			 if(isset($_POST['Result'])){
 			     		echo $abc;
 			     }	 
