@@ -155,7 +155,7 @@
 					
 				    
                             }
-	             		$radioVal = $_POST["status"];
+	             		$radioVal = $_POST["status[$i]"];
 				   $abc = $radioVal;
 			  }
              
@@ -166,7 +166,7 @@
 	   
 	    if(isset($_POST['Result'])){
 					 for($j=0;$j<3;$j++){
-                                            echo $status[$j];
+                                            echo $abc;
 					 echo 'Heloooooooooooooooooo';
 					 }
 			     		
