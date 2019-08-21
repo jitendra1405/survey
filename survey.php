@@ -157,7 +157,7 @@
 			  }
 	                   echo '<form method="POST"><input type="submit" value="Result" name="Result">';
 		            if(isset($_POST['Result'])){
-			     		echo $radioVal;
+			     		echo 'kkkkkkkkkkkkkkkkkkk';
 			     }	 
                             pg_close($dbconn); 
 	   
