@@ -139,14 +139,14 @@
 				$num_rows = pg_num_rows($resultset);
 	                   while($row1 = pg_fetch_array($resultset1)) {
                                  
-				   echo '<form method="POST">
+				   echo '
 				        <br/><tr>
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
 					
                                     <br/></tr>
-				    </form>
+				   
 				    ';
 				   		   
 				   $radioVal = $_POST["status"];
@@ -156,7 +156,7 @@
                             }
 	             
 			  }
-                           <input type="submit" value="Result" name="Result">
+                           echo '<form method="POST"><input type="submit" value="Result" name="Result"> </form>';
 	                  if(isset($_POST['Result'])){
 			     		echo $abc;
 			     }	 
