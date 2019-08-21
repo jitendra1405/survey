@@ -144,7 +144,7 @@
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
-					<input type="submit" value="Result" name="Result">
+					
                                     <br/></tr>
 				   </form>
 				    ';
@@ -157,13 +157,17 @@
 				   $abc = $radioVal;
 			  }
                            
-	                  if(isset($_POST['Result'])){
-			     		echo $abc;
-			     }	 
+	                  
 		            
                             pg_close($dbconn); 
 	   
 ?>
+	   <?php
+	    echo '<form method="POST"><input type="submit" value="Result" name="Result"></form>';
+	   if(isset($_POST['Result'])){
+			     		echo $abc;
+			     }	 
+	   ?>
 	   
 	
 <button id="upload_widget" class="cloudinary-button">Upload files</button>
