@@ -150,7 +150,7 @@
     					<input type="submit" value="Result" name="Result"> //This button opens Result.php
 				     <form>';
 				   $radioVal = $_POST["status[' . $row[0] . ']"];
-				   if(isset($_POST['use_button']))
+				   if(isset($_POST['Result']))
 					{
 					echo $radioVal;
 				   }
