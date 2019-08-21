@@ -145,24 +145,24 @@
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
-					
+					<input type="submit" value="Result" name="Result">
                                     <br/></tr>
 				    </form>
 				    ';
 				   		   
 				   $radioVal = $_POST["status"];
 				   
-                            	
+                            	if(isset($_POST['use_button']))
+				{
+					echo $radioVal;
+				}
 				    
                             }
 	             
 			  }
 			    } 
-		            echo '<form method="POST"> <input type="submit" value="Result" name="Result">';
-	   		    if(isset($_POST['use_button']))
-				{
-					echo $radioVal;
-				}
+		            
+	   		    
                             pg_close($dbconn); 
 	   
 ?>
