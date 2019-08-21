@@ -11,8 +11,7 @@
 		            $num_rows = pg_num_rows($resultset);
 	   		  
                             while($row = pg_fetch_array($resultset)) {
-    for($i=1;$i<=$num_rows;$i++)
-    {
+   
         ?>
         <div class="well well-sm well-primary">
             <input type="hidden" name="ques"/><?php echo $row[1]; ?>
@@ -23,6 +22,9 @@
                                
 				$num_rows = pg_num_rows($resultset);
 	                   while($row1 = pg_fetch_array($resultset1)) {
+				   
+				    for($i=1;$i<=$num_rows;$i++)
+    {
 				   ?>
         <div class="well well-sm">
             <div class="radio">
