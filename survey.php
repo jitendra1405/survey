@@ -151,7 +151,7 @@
 				    ';
 				   		   
 				   $radioVal = $_POST["status"];
-				   $cars[$i] = array($radioVal);
+				   
                             	
 				    
                             }
@@ -161,7 +161,7 @@
 		            echo '<form method="POST"> <input type="submit" value="Result" name="Result">';
 	   		    if(isset($_POST['use_button']))
 				{
-					echo $cars[0];
+					echo $radioVal;
 				}
                             pg_close($dbconn); 
 	   
