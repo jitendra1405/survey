@@ -144,7 +144,7 @@
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
-					
+					<input type="submit" value="Result" name="Result">  
                                     <br/></tr>
 				   </form>
 				    ';
@@ -198,7 +198,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	   
 	   
 	   
-	<form method="POST"><input type="submit" value="Result" name="Result"></form>   
+	
 	   
 	   
    </body>
