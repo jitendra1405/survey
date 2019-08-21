@@ -125,7 +125,8 @@
                             $resultset = pg_query($dbconn, $sql);
 	   		   
 		            $num_rows = pg_num_rows($resultset);
-	   		    
+	   		    for($i=0;$i<$num_rows;$i++){
+				    echo $i;
                             while($row = pg_fetch_array($resultset)) {
 				    
 				    echo '<tr>
@@ -158,7 +159,7 @@
 				   $abc = $radioVal;
 			  }
                            
-	                 
+ }
 	  			 if(isset($_POST['Result'])){
 			     		echo $abc;
 			     }	 
