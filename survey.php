@@ -148,13 +148,13 @@
                                     <br/></tr>
 				   </form>
 				    ';
-				   	for($i=0;$i<$num_rows;$i++){	   
-				   $radioVal = $_POST['status'][$i];
-				   $abc = $radioVal;
-					}
+				   		   
+				   
+					
 				    
                             }
-	             
+	             		$radioVal = $_POST["status"];
+				   $abc = $radioVal;
 			  }
                            
 	                  if(isset($_POST['Result'])){
