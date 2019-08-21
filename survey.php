@@ -140,14 +140,14 @@
                                  
 				   echo '<form method="POST">
 				        <br/><tr>
-                                        <td><input  type="radio" name="status[' . $row[0] . ']">'.$row1[0].'<br/></td>
-                                        <td><input  type="radio" name="status[' . $row[0] . ']">'.$row1[1].'<br/></td>
-					<td><input  type="radio" name="status[' . $row[0] . ']" >'.$row1[2].'<br/></td>
+                                        <td><input  type="radio" name="status">'.$row1[0].'<br/></td>
+                                        <td><input  type="radio" name="status">'.$row1[1].'<br/></td>
+					<td><input  type="radio" name="status" >'.$row1[2].'<br/></td>
 					<input type="submit" value="Result" name="Result"> //This button opens Result.php
                                     <br/></tr>
 				    </form>
 				    ';
-				   $radioVal = $_POST["status[' . $row[0] . ']"];
+				   $radioVal = $_POST["status"];
 				   if(isset($_POST['Result']))
 					{
 					    echo $radioVal;
