@@ -114,7 +114,7 @@
       </section>-->
 	  
 	  <!---Footer--->
-	 <form method="POST">	   
+	  
 
 	    <?php
        	    
@@ -160,7 +160,7 @@
 			  }
                            
  }
-	   <input type="submit" value="Result" name="Result">  </form>
+	   
 		   
 	             foreach($_POST['status'] as $option_num => $option_val)
                       echo $option_num." ".$option_val."<br>";
@@ -175,8 +175,8 @@
                             pg_close($dbconn); 
 	   
 ?>
-	 
-	   
+<form method="POST">	  	 
+<input type="submit" value="Result" name="Result">  </form>	   
 	
 <button id="upload_widget" class="cloudinary-button">Upload files</button>
   
