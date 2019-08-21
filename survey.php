@@ -143,14 +143,14 @@
                                         <td><input  type="radio" name="status" value="' . $row1[0] . '">'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name="status" value="' . $row1[1] . '">'.$row1[1].'<br/></td>
 					<td><input  type="radio" name="status" value="' . $row1[2] . '">'.$row1[2].'<br/></td>
-					<input type="submit" value="Result" name="Result">
+					<input type="submit" value="Result" name="c">
                                     <br/></tr>
 				    </form>
 				    ';
 				   		   
 				   $radioVal = $_POST["status"];
 				   
-                            	if(isset($_POST['use_button']))
+                            	if(isset($_POST['Result']))
 				{
 					echo $radioVal;
 				}
