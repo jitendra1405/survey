@@ -114,7 +114,7 @@
       </section>-->
 	  
 	  <!---Footer--->
-	 <form method="POST"><input type="submit" value="Result" name="Result"></form>
+	 
 	    <?php
        	    
 	    	   $dbconn = pg_connect("host=ec2-54-225-72-238.compute-1.amazonaws.com port=5432 dbname=d1mbimqnj4bo69 user=oyymgxywhiwmff password=5fcdb5e030395d64b21992644afe083d537353d7a0653755c0a166b088a826a3");
@@ -158,7 +158,7 @@
 			  }
                            
 	                 
-	  			 if(isset($_POST['Result'])){
+	  			 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['Result']))
 			     		echo $abc;
 			     }	 
 	   
@@ -168,7 +168,7 @@
 ?>
 	 
 	   
-	   
+<form method="POST"><input type="submit" value="Result" name="Result"></form>	   
 	
 <button id="upload_widget" class="cloudinary-button">Upload files</button>
   
