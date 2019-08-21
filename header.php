@@ -68,8 +68,8 @@
           <li><a href="#">Features</a></li>
           <li><a href="#">Resources</a></li>
           <li><a href="#">Pricing</a></li>
-		  <li><a href="#"><span class="reg-button">Free Account</span></a></li>
-		  <li><a href="#"><span class="login-button">Login</span></a></li>
+		  <li><a href="user-registration.php"><span class="reg-button">Free Account</span></a></li>
+		  <li><a href="login.php"><span class="login-button">Login</span></a></li>
         </ul>
       </nav><!-- .main-nav -->
       
