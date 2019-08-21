@@ -162,13 +162,14 @@
  }
 	   
 		   
-	             foreach($_POST['status'] as $option_num => $option_val)
-                      echo $option_num." ".$option_val."<br>";
+	             
 	   
 	   
 	   
 	  			 if(isset($_POST['Result'])){
-			     		echo $abc;
+					 foreach($_POST['status'] as $option_num => $option_val){
+                                            echo $option_num." ".$option_val."<br>";}
+			     		echo 'Heloooooooooooooooooo';
 			     }	 
 	   
 		            
