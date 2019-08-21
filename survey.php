@@ -123,9 +123,7 @@
 	           
                             $resultset = pg_query($dbconn, $sql);
 	   		   
-		            $num_rows = pg_num_rows($resultset);
-	   		 
-			    for($i=0;$i<$num_rows;$i++){
+		            $num_rows = pg_num_rows($resultset); 
                             while($row = pg_fetch_array($resultset)) {
 				    
 				    echo '<tr>
@@ -160,7 +158,7 @@
                             }
 	             
 			  }
-			    } 
+			    
 		            
 	   		    
                             pg_close($dbconn); 
