@@ -158,7 +158,7 @@
 			  }
                            
 	                 
-	  			 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['Result']))
+	  			 if(isset($_POST['Result']))
 			     		echo $abc;
 			     }	 
 	   
