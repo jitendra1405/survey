@@ -26,3 +26,52 @@
   <link href="css/media-query.css" rel="stylesheet">
   <link href="css/custom-color.css" rel="stylesheet">
 </head>
+<style>
+.reg-button{
+	    background: #000;
+    color: #fff;
+    padding: 8px 10px 8px 10px;
+	font-size: 12px;
+}
+.login-button{
+	background: #2196F3;
+    color: #fff;
+       padding: 8px 20px 8px 20px;
+    font-size: 12px;
+}
+</style>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <!--<div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <a href="#" class="twitter">Login</a>
+          <a href="#" class="facebook">Sign up</a>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>SaaS Survey</span></a></h1>
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#">Products</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Pricing</a></li>
+		  <li><a href="#"><span class="reg-button">Free Account</span></a></li>
+		  <li><a href="#"><span class="login-button">Login</span></a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
