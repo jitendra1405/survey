@@ -137,14 +137,14 @@
                                
 				$num_rows = pg_num_rows($resultset);
 	                   while($row1 = pg_fetch_array($resultset1)) {
-                                   for($i=0;$i<$num_rows;$i++){
+                                   $i = 1;
 				   echo '<br/><tr>
                                         <td><input  type="radio" name='$i'>'.$row1[0].'<br/></td>
                                         <td><input  type="radio" name='$i'>'.$row1[1].'<br/></td>
 					<td><input  type="radio" name='$i'>'.$row1[2].'<br/></td>
 					
                                     <br/></tr>';
-				   }
+				  i = i+ 1 ;
                             }
 				    
                             }
