@@ -165,10 +165,9 @@
 	             
 	   
 	    if(isset($_POST['Result'])){
-					 for($j=0;$j<3;$j++){
-                                            echo $abc;
-					 echo 'Heloooooooooooooooooo';
-					 }
+					 foreach($_POST['status'] as $key => $value){ 
+    						echo "Question No. $key, Value = $value<br>"; 
+						} 
 			     		
 			     }	               
 	   
