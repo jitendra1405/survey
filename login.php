@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+   <?php include 'header.php';?>
 <html>
    <title>User Login</title>
    <!--/////////////////Head Include/////////-->
-   
+
    <!--/////////////////////////////////////-->
    <body class="login">
       <section id="login-section">
