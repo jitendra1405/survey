@@ -49,7 +49,7 @@
     }
 			    
     ?>
-	<input type="text" style="display:none" id="hiddenVal" />
+	
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	</form>	
 	<button id="upload_widget" class="cloudinary-button">Upload files</button>
@@ -66,7 +66,7 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
-    document.getElementById("hiddenVal").value = url;
+    
     }
   }
 )
@@ -93,7 +93,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-	
+	        echo '<h1>"the value for number is: " + url</h1>';
 	echo $_POST["hiddenVal"];
 		
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
