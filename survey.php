@@ -54,6 +54,8 @@
 	
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	</form>	
+	
+		
 	<button id="upload_widget" class="cloudinary-button">Upload files</button>
   
 
@@ -77,24 +79,20 @@ document.getElementById("upload_widget").addEventListener("click", function(){
   }, false);
  
 	
-	 $.ajax({    //create an ajax request to load page.php
-        type: "GET",
-        
-
-        data:"varabletophp="+url,    //Here is the value you wish to pass in to php page        
-        dataType: "html",   //expect html to be returned                
-        success: function(response){                    
-
-          alert(response);
-        }
-
-    });  
-	
+	var profile_viewer_uid = 1;
+	$.ajax({
+	url: "serverScript.php",
+	method: "POST",
+	data: { "profile_viewer_uid": profile_viewer_uid }
+	})
 	
   
 </script>  
 
  <?php 
+	$profile_viewer_uid = $_POST['profile_viewer_uid'];
+ 	echo($profile_viewer_uid);
+	
 	if(isset($_POST['submit'])){
 	$c ="";
  foreach($_POST['optradio'] as $option_num => $option_val){
