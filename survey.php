@@ -76,10 +76,11 @@ var myWidget = cloudinary.createUploadWidget({
 	}
   }
 )
+p1 = url;
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);	
-	p1 = url;
+	
 </script>  
 
  <?php 
