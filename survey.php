@@ -1,11 +1,9 @@
 <?php session_start();
       //Put session start at the beginning of the file
+$var="<script type='text/javascript'>document.write(url)</script>"
+echo $var;
+?>
 
-?>
-<?php
-$var="<script>document.write(url)</script>"
-        echo $var;  
-?>
 <html>
 <body>
 <form method="post">
