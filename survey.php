@@ -72,7 +72,7 @@
 	 pg_close($dbconn);
 	}
 ?>
-	
+</form>	
 <button id="upload_widget" class="cloudinary-button">Upload files</button>
   
 
@@ -104,6 +104,6 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	   
 	   
 	   
-</form>
+
 </body>
 </html>
