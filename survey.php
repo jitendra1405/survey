@@ -49,7 +49,7 @@
     }
 			    
     ?>
-	
+	<input type="text" style="display:none" id="hiddenVal" />
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	</form>	
 	<button id="upload_widget" class="cloudinary-button">Upload files</button>
@@ -76,7 +76,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
   
   
 </script>  
-<input type="text" style="display:none" id="hiddenVal" />	
+	
  <?php 
 	if(isset($_POST['submit'])){
 	$c ="";
