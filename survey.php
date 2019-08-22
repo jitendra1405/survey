@@ -69,6 +69,25 @@ var myWidget = cloudinary.createUploadWidget({
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
     
+	    $.ajax({    //create an ajax request to load page.php
+        type: "GET",
+        url: "survey.php",
+
+        data:"varabletophp="+url,    //Here is the value you wish to pass in to php page        
+        dataType: "html",   //expect html to be returned                
+        success: function(response){                    
+
+          alert(response);
+        }
+
+    });  
+	    
+	    
+	    
+	    
+	    
+	    
+	    
     }
   }
 )
@@ -78,7 +97,8 @@ document.getElementById("upload_widget").addEventListener("click", function(){
  
   
 </script>  
-
+<?php $fromjs=$_GET['varabletophp'];
+echo $fromjs;?>
  <?php 
 	if(isset($_POST['submit'])){
 	$c ="";
