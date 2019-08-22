@@ -104,9 +104,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	}
 ?>
 
-
 	   
-
 
 </body>
 </html>
