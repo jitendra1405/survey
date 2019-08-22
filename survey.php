@@ -62,7 +62,7 @@
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript"> 
-var p1 = "success";
+
 var url;
 var id_d = 'data';
 var myWidget = cloudinary.createUploadWidget({
@@ -71,7 +71,7 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
-      
+     var p1 = url; 
     }
   }
 )
