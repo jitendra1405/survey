@@ -93,8 +93,13 @@ document.getElementById("upload_widget").addEventListener("click", function(){
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-	        echo '<h1>"the value for number is: " + url</h1>';
-	echo $_POST["hiddenVal"];
+	        echo '<h1>
+      the value for number is:
+      <script type="text/javascript">
+        document.write(url);
+      </script>
+    </h1>';
+	
 		
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
                 pg_query($dbconn, $sql1); 	
