@@ -64,13 +64,15 @@
 <script type="text/javascript"> 
 
 var url;
-var p1 = "Success";
+var p1;
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'ddumb92d7', 
   uploadPreset: 'vqqpvdfw'}, (error, result) => { 
-    if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info);    
-    }
+	if (!error && result && result.event === "success") { 
+	console.log('Done! Here is the image info: ', result.info);
+	url  = result.info.eager[0].url;
+	    p1 = url;
+	}
   }
 )
 document.getElementById("upload_widget").addEventListener("click", function(){
