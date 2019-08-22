@@ -50,30 +50,8 @@
 			    
     ?>
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
-	
- <?php 
-	if(isset($_POST['submit'])){
-	$c ="";
- foreach($_POST['optradio'] as $option_num => $option_val){
-    echo $option_num." ".$option_val."<br>";
-    $c = $c.$option_num.". ".$option_val." \n ";
- }   
-	
-      $fff = $_SESSION['var'];
-      $sql2 = "Select ID,SFID from contact.contact where email='".$fff."'";
-      $resultset2 = pg_query($dbconn, $sql2); 
-      $row3 = pg_fetch_array($resultset2);
-		echo $row3[0];
-		echo $row3[1];
-		
-		
-      $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
-                pg_query($dbconn, $sql1); 	
-	 pg_close($dbconn);
-	}
-?>
-</form>	
-<button id="upload_widget" class="cloudinary-button">Upload files</button>
+	</form>	
+	<button id="upload_widget" class="cloudinary-button">Upload files</button>
   
 
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
@@ -87,7 +65,7 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
-    
+    document.getElementById("hidden1").value = url;
       
     }
   }
@@ -98,11 +76,33 @@ document.getElementById("upload_widget").addEventListener("click", function(){
   
   
 </script>   
-	   
-<?php
-	echo "<script>document.writeln(url);</script>";
-
+ <?php 
+	if(isset($_POST['submit'])){
+	$c ="";
+ foreach($_POST['optradio'] as $option_num => $option_val){
+    echo $option_num." ".$option_val."<br>";
+    $c = $c.$option_num.". ".$option_val." \n ";
+ }   
+	
+      $fff = $_SESSION['var'];
+      $salarieid = $_POST['hidden1'];
+		echo $salarieid;
+      $sql2 = "Select ID,SFID from contact.contact where email='".$fff."'";
+      $resultset2 = pg_query($dbconn, $sql2); 
+      $row3 = pg_fetch_array($resultset2);
+		echo $row3[0];
+		echo $row3[1];
+		
+		
+      $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
+                pg_query($dbconn, $sql1); 	
+	 pg_close($dbconn);
+	}
 ?>
+
+
+	   
+
 
 </body>
 </html>
