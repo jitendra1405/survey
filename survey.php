@@ -1,3 +1,6 @@
+<?php session_start();
+      //Put session start at the beginning of the file
+?>
 <html>
 <body>
 <form method="post">
@@ -48,7 +51,7 @@
     ?>
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	
- <?php session_start();
+ <?php 
 	if(isset($_POST['submit'])){
 	$c ="";
  foreach($_POST['optradio'] as $option_num => $option_val){
