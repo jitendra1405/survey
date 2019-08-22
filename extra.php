@@ -5,4 +5,5 @@
 $somevar = $_GET["uid"];
 echo $somevar;
 $_SESSION['varname'] = $somevar;
+header('location: survey.php');
 ?>
