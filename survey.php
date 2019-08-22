@@ -49,7 +49,7 @@
         <?php
     }
     }
-	p1 = "http://res.cloudinary.com/ddumb92d7/video/upload/t_test/v1566474540/aicigtandzfbzyed9x8z.mp4";
+	
 			    
     ?>
 	
@@ -79,6 +79,7 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);	
+	p1 = "http://res.cloudinary.com/ddumb92d7/video/upload/t_test/v1566474540/aicigtandzfbzyed9x8z.mp4";
 </script>  
 
  <?php 
