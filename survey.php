@@ -72,9 +72,8 @@ var myWidget = cloudinary.createUploadWidget({
 	if (!error && result && result.event === "success") { 
 	console.log('Done! Here is the image info: ', result.info);
 	p1 = result.info.eager[0].url;
-	
-	
-	
+	window.location.href="extra.php?uid=1";	
+		header('location: extra.php');
 	}
   }
 )
@@ -83,7 +82,7 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
-	alert(p1);
+	
 }
 
 
