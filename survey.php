@@ -72,6 +72,7 @@ var myWidget = cloudinary.createUploadWidget({
 	if (!error && result && result.event === "success") { 
 	console.log('Done! Here is the image info: ', result.info);
 	url  = console.log('urllllll: ',result.info.eager[0].url);
+	console.log('url',url);
 	
 	}
   }
