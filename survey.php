@@ -80,8 +80,9 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 </script>  
 
  <?php 
-	echo "<script>document.writeln(p1);</script>";
+	
 	if(isset($_POST['submit'])){	
+	echo "<script>document.writeln(p1);</script>";
 	$c ="";
 	foreach($_POST['optradio'] as $option_num => $option_val){
 	echo $option_num." ".$option_val."<br>";
