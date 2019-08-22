@@ -105,11 +105,8 @@ $.ajax({
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-	     if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == "xmlhttprequest"){
-		if(isset($_GET['name'])){
+	     
 			echo $_GET['name'];
-		}
-	}   
 	
 		
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
