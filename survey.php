@@ -57,13 +57,13 @@
 	</form>	
 	
 		
-	<button id="upload_widget" class="cloudinary-button">Upload files</button>
+	<button id="upload_widget" class="cloudinary-button" onclick="abc()">Upload files</button>
   
 
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript"> 
-
+function abc(){
 var url;
 var p1 ;
 var myWidget = cloudinary.createUploadWidget({
@@ -83,7 +83,8 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);	
-alert(p1);	
+alert(p1);
+}
 </script>  
 
  <?php 
