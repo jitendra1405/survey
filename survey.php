@@ -77,18 +77,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
  
   
 </script>  
-<script>
-	let name = "Takkar"
-$.ajax({
-	url: "/url",
-	method: "GET",
-	data: { name },
-	dataType: "JSON",
-	success = data => {
-		console.log(data)
-	}
-})
-	</script>
+
  <?php 
 	if(isset($_POST['submit'])){
 	$c ="";
@@ -106,9 +95,6 @@ $.ajax({
 		echo $row3[0];
 		echo $row3[1];
 	     
-			echo $_GET['name'];
-	
-		
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
