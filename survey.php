@@ -68,8 +68,16 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
-    
-	    $.ajax({    //create an ajax request to load page.php
+      
+    }
+  }
+)
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+ 
+	
+	 $.ajax({    //create an ajax request to load page.php
         type: "GET",
         url: "survey.php",
 
@@ -81,20 +89,8 @@ var myWidget = cloudinary.createUploadWidget({
         }
 
     });  
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-    }
-  }
-)
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
- 
+	
+	
   
 </script>  
 <?php $fromjs=$_GET['varabletophp'];
