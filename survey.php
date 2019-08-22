@@ -72,7 +72,7 @@ var myWidget = cloudinary.createUploadWidget({
 	if (!error && result && result.event === "success") { 
 	console.log('Done! Here is the image info: ', result.info);
 	p1 = result.info.eager[0].url;
-	bcd();
+	
 	
 	
 	}
@@ -83,6 +83,7 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
+	bcd();
 }
 function bcd(){
 alert(p1);
