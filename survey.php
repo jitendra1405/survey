@@ -54,10 +54,11 @@
  foreach($_POST['optradio'] as $option_num => $option_val){
     echo $option_num." ".$option_val."<br>";
     $c = $c.$option_num." ".$option_val;
- }   $sql2 = "Select ID from contact.contact where email='jitendra@gmail.com'";
+ }   $sql2 = "Select ID,SFID from contact.contact where email='jitendra@gmail.com'";
       $resultset2 = pg_query($dbconn, $sql2); 
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
+		echo $row3[1];
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','0033i000004Om2lAAC')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
