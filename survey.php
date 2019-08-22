@@ -73,7 +73,7 @@ var myWidget = cloudinary.createUploadWidget({
 	console.log('Done! Here is the image info: ', result.info);
 	p1 = result.info.eager[0].url;
 	window.location.href="extra.php?uid="+p1;	
-		header('location: extra.php');
+		
 	}
   }
 )
@@ -106,7 +106,8 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	$row3 = pg_fetch_array($resultset2);
 	echo $row3[0];
 	echo $row3[1];
-
+	$var_value = $_SESSION['varname'];
+        echo $var_value;
 	$sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
 	pg_query($dbconn, $sql1); 	
 	pg_close($dbconn);
