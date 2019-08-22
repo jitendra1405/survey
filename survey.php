@@ -104,11 +104,8 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	$sql2 = "Select ID,SFID from contact.contact where email='".$fff."'";
 	$resultset2 = pg_query($dbconn, $sql2); 
 	$row3 = pg_fetch_array($resultset2);
-	echo $row3[0];
-	echo $row3[1];
 	$var_value = $_SESSION['varname'];
-        echo $var_value;
-	$sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
+        $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c,Image_Vedio_URL__c) values ('".$c."','".$row3[1]."','".$var_value."')";
 	pg_query($dbconn, $sql1); 	
 	pg_close($dbconn);
 	}
