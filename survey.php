@@ -73,16 +73,17 @@ var myWidget = cloudinary.createUploadWidget({
 	console.log('Done! Here is the image info: ', result.info);
 	p1 = result.info.eager[0].url;
 	
-	alert(p1);
+	
 	
 	}
   }
 )
 
+
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);	
-	
+alert(p1);	
 </script>  
 
  <?php 
