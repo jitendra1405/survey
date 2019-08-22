@@ -57,7 +57,8 @@
  }   $sql2 = "Select SFID from contact.contact where email='jitendra14may@gmail.com'";
       $resultset2 = pg_query($dbconn, $sql2); 
       $row3 = pg_fetch_array($resultset2);
-      $sql1 = "INSERT into contact.Survey__c (Feedback__c) values ('".$c."','".$row3[0]."')";
+		echo $row3[0];
+      $sql1 = "INSERT into contact.Survey__c (Feedback__c) values ('".$c."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
 	}
