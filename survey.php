@@ -72,14 +72,14 @@ var myWidget = cloudinary.createUploadWidget({
 	if (!error && result && result.event === "success") { 
 	console.log('Done! Here is the image info: ', result.info);
 	url  = console.log('urllllll: ',result.info.eager[0].url);
-	p1 = "http://res.cloudinary.com/ddumb92d7/video/upload/t_test/v1566474540/aicigtandzfbzyed9x8z.mp4";
+	
 	}
   }
 )
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);	
-	p1 = "http://res.cloudinary.com/ddumb92d7/video/upload/t_test/v1566474540/aicigtandzfbzyed9x8z.mp4";
+	p1 = url;
 </script>  
 
  <?php 
