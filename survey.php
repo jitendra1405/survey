@@ -81,7 +81,6 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 </script>  
 
  <?php 
-	
 	if(isset($_POST['submit'])){	
 	echo "<script>document.writeln(p1);</script>";
 	$c ="";
