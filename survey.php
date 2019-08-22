@@ -1,6 +1,11 @@
 <?php session_start();
       //Put session start at the beginning of the file
 ?>
+<?php if( isset($_POST['value']) ){
+ echo $_POST['value'];
+ exit;
+}
+?>
 <html>
 <body>
 <form method="post">
@@ -66,14 +71,20 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
-    
+    var x = document.getElementById(url).value;
     }
   }
 )
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
-  
+ $.ajax({
+  type: 'post',
+  data: {value: x},
+  success: function(data){
+                       alert("success! X:" + data);
+                    }
+}); 
   
 </script>  
 	
@@ -93,12 +104,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-	        echo '<h1>
-      the value for number is:
-      <script type="text/javascript">
-        document.write(url);
-      </script>
-    </h1>';
+	        
 	
 		
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
