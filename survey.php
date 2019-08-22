@@ -62,8 +62,7 @@
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript"> 
-xmlhttp.open("GET","getvalue.php?id="+'test');
-xmlhttp.send(); 
+var p1 = "success";
 var url;
 var id_d = 'data';
 var myWidget = cloudinary.createUploadWidget({
@@ -84,8 +83,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
  <?php 
 	
 	if(isset($_POST['submit'])){
-	$getthevalueofid = $_GET['id'];
-	echo($getthevalueofid);
+	echo "<script>document.writeln(p1);</script>";
 	$c ="";
 	foreach($_POST['optradio'] as $option_num => $option_val){
 	echo $option_num." ".$option_val."<br>";
