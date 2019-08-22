@@ -74,7 +74,11 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
- let name = "Takkar"
+ 
+  
+</script>  
+<script>
+	let name = "Takkar"
 $.ajax({
 	url: "/url",
 	method: "GET",
@@ -84,9 +88,7 @@ $.ajax({
 		console.log(data)
 	}
 })
-  
-</script>  
-	
+	</script>
  <?php 
 	if(isset($_POST['submit'])){
 	$c ="";
