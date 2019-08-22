@@ -1,10 +1,9 @@
 <?php session_start();
       //Put session start at the beginning of the file
 ?>
-<?php if( isset($_POST['value']) ){
+<?php 
  echo $_POST['value'];
- exit;
-}
+ 
 ?>
 <html>
 <body>
