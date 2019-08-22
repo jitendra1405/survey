@@ -51,10 +51,10 @@
  <?php 
  foreach($_POST['optradio'] as $option_num => $option_val){
     echo $option_num." ".$option_val."<br>";
- $sql1 = "INSERT into contact.Survey__c (Feedback__c) values ('".$option_num."')";
-                pg_query($dbconn, $sql1); 
+ 
  }
-	
+      $sql1 = "INSERT into contact.Survey__c (Feedback__c) values ('".$option_num."')";
+                pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn); 			    
 ?>
 
