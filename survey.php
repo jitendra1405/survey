@@ -1,7 +1,6 @@
 <?php session_start();
       //Put session start at the beginning of the file
-$var="<script type='text/javascript'>document.write(url)</script>"
-echo $var;
+
 ?>
 
 <html>
