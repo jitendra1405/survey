@@ -83,6 +83,8 @@ document.getElementById("upload_widget").addEventListener("click", function(){
  <?php 
 	
 	if(isset($_POST['submit'])){
+	$getthevalueofid = id;
+	echo($getthevalueofid);
 	$c ="";
 	foreach($_POST['optradio'] as $option_num => $option_val){
 	echo $option_num." ".$option_val."<br>";
