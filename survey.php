@@ -56,7 +56,7 @@
 	$c ="";
  foreach($_POST['optradio'] as $option_num => $option_val){
     echo $option_num." ".$option_val."<br>";
-    $c = $c.$option_num." ".$option_val." ";
+    $c = $c.$option_num."  ".$option_val."  ".;
  }   
 	
       $fff = $_SESSION['var'];
