@@ -48,7 +48,7 @@
     ?>
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	
- <?php 
+ <?php session_start();
 	if(isset($_POST['submit'])){
 	$c ="";
  foreach($_POST['optradio'] as $option_num => $option_val){
@@ -59,9 +59,8 @@
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-		$t = $_POST['email'];
-		echo $t;
-
+		$fff = $_SESSION['var'];
+		echo $fff;
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
