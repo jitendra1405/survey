@@ -63,8 +63,8 @@
 
 <script type="text/javascript"> 
   
-  var url;
-var id = "data";
+var url;
+var id = 'data';
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'ddumb92d7', 
   uploadPreset: 'vqqpvdfw'}, (error, result) => { 
@@ -81,29 +81,27 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 </script>  
 
  <?php 
-	
-	
+	$getthevalueofid = var id;
+	echo($getthevalueofid);	
 	if(isset($_POST['submit'])){
 	$c ="";
- foreach($_POST['optradio'] as $option_num => $option_val){
-    echo $option_num." ".$option_val."<br>";
-    $c = $c.$option_num.". ".$option_val." \n ";
- }   
-	
-      $fff = $_SESSION['var'];
-      
-		
-      $sql2 = "Select ID,SFID from contact.contact where email='".$fff."'";
-      $resultset2 = pg_query($dbconn, $sql2); 
-      $row3 = pg_fetch_array($resultset2);
-		echo $row3[0];
-		echo $row3[1];
-		$getthevalueofid = var id;
-		echo($getthevalueofid);
-	  
-      $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
-                pg_query($dbconn, $sql1); 	
-	 pg_close($dbconn);
+	foreach($_POST['optradio'] as $option_num => $option_val){
+	echo $option_num." ".$option_val."<br>";
+	$c = $c.$option_num.". ".$option_val." \n ";
+	}   
+
+	$fff = $_SESSION['var'];
+
+
+	$sql2 = "Select ID,SFID from contact.contact where email='".$fff."'";
+	$resultset2 = pg_query($dbconn, $sql2); 
+	$row3 = pg_fetch_array($resultset2);
+	echo $row3[0];
+	echo $row3[1];
+
+	$sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
+	pg_query($dbconn, $sql1); 	
+	pg_close($dbconn);
 	}
 ?>
 
