@@ -77,21 +77,12 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
- 
+var id = "data"	
 	
-	var profile_viewer_uid = 1;
-	$.ajax({
-	url: "serverScript.php",
-	method: "POST",
-	data: { "profile_viewer_uid": profile_viewer_uid }
-	})
-	
-  
 </script>  
 
  <?php 
-	$profile_viewer_uid = $_POST['profile_viewer_uid'];
- 	echo($profile_viewer_uid);
+	
 	
 	if(isset($_POST['submit'])){
 	$c ="";
@@ -108,8 +99,9 @@ document.getElementById("upload_widget").addEventListener("click", function(){
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-	   $fromjs=$_GET['varabletophp'];
-echo $fromjs;
+		$getthevalueofid = var id;
+		echo($getthevalueofid);
+	  
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
