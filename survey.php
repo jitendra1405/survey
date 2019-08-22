@@ -56,7 +56,7 @@
     $c = $c.$option_num." ".$option_val;
  }    $sql2 = "Select SFID from contact.contact where email='jitendra14may@gmail.com';
       $resultset2 = pg_query($dbconn, $sql2); 
-      $row1 = pg_fetch_array($resultset2)
+      $row1 = pg_fetch_array($resultset2);
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row1[0]."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
