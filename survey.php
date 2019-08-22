@@ -59,7 +59,7 @@
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-      $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','0033i000004Om2lAAC')";
+      $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn);
 	}
