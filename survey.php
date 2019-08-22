@@ -70,7 +70,7 @@ var myWidget = cloudinary.createUploadWidget({
   uploadPreset: 'vqqpvdfw'}, (error, result) => { 
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info);    
-     var p1 = result.info.eager[0].url;
+     var p1 = 'testing';
     }
   }
 )
