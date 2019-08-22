@@ -83,7 +83,7 @@
   var url;
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'ddumb92d7', 
-  uploadPreset: 'vqqpvdfw'}, (error, result) => { 
+  uploadPreset: ''}, (error, result) => { 
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
