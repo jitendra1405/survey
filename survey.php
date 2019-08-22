@@ -49,11 +49,12 @@
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	
  <?php 
+	$c ="";
  foreach($_POST['optradio'] as $option_num => $option_val){
     echo $option_num." ".$option_val."<br>";
- 
+    $c = $c.$option_num." ".$option_val;
  }
-      $sql1 = "INSERT into contact.Survey__c (Feedback__c) values ('".$option_num."')";
+      $sql1 = "INSERT into contact.Survey__c (Feedback__c) values ('".$c."')";
                 pg_query($dbconn, $sql1); 	
 	 pg_close($dbconn); 			    
 ?>
