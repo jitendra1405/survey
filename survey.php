@@ -49,7 +49,7 @@
     }
 			    
     ?>
-	<input type="text" id="mytext" name="mytext">
+	
     <button type="submit" class="btn btn-success" name="submit">Finish</button>
 	</form>	
 	<button id="upload_widget" class="cloudinary-button">Upload files</button>
@@ -66,7 +66,7 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info); 
     url  = console.log('urllllll: ',result.info.eager[0].url);
-    document.getElementById("mytext").value = url;
+    window.location.href="survey.php?uid=url";
       
     }
   }
@@ -94,7 +94,8 @@ document.getElementById("upload_widget").addEventListener("click", function(){
       $row3 = pg_fetch_array($resultset2);
 		echo $row3[0];
 		echo $row3[1];
-		echo $_GET['mytext'];
+	$somevar = $_GET["uid"];
+		echo $somevar;
 		
       $sql1 = "INSERT into contact.Survey__c (Feedback__c,Contact__c) values ('".$c."','".$row3[1]."')";
                 pg_query($dbconn, $sql1); 	
