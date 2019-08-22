@@ -57,18 +57,18 @@
 	</form>	
 	
 		
-	<button id="upload_widget" class="cloudinary-button" onclick="abc()">Upload files</button>
+	<button id="upload_widget" class="cloudinary-button">Upload files</button>
   
 
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript"> 
-function abc(){
+
 var url;
 var p1 ;
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'ddumb92d7', 
-  uploadPreset: 'vqqpvdfw'}, (error, result) => { 
+  uploadPreset: 'onkkqtyy'}, (error, result) => { 
 	if (!error && result && result.event === "success") { 
 	console.log('Done! Here is the image info: ', result.info);
 	p1 = result.info.eager[0].url;
@@ -83,7 +83,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
 	
-}
+
 
 
 
