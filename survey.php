@@ -79,7 +79,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 	
 	 $.ajax({    //create an ajax request to load page.php
         type: "GET",
-        url: "survey.php",
+        
 
         data:"varabletophp="+url,    //Here is the value you wish to pass in to php page        
         dataType: "html",   //expect html to be returned                
