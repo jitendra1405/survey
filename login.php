@@ -1,4 +1,7 @@
-   <?php session_start(); include 'login-head.php';?>
+<?php session_start();
+      //Put session start at the beginning of the file
+?>   
+<?php include 'login-head.php';?>
 <html>
    <title>User Login</title>
    <!--/////////////////Head Include/////////-->
