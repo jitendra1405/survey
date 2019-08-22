@@ -83,11 +83,11 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
-	bcd();
+	alert(p1);
 }
-function bcd(){
-alert(p1);
-}
+
+
+
 </script>  
 
  <?php 
