@@ -62,9 +62,10 @@
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript"> 
-  
+xmlhttp.open("GET","getvalue.php?id="+id,true);
+xmlhttp.send(); 
 var url;
-var id = 'data';
+var id_d = 'data';
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'ddumb92d7', 
   uploadPreset: 'vqqpvdfw'}, (error, result) => { 
@@ -83,7 +84,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
  <?php 
 	
 	if(isset($_POST['submit'])){
-	$getthevalueofid = var id;
+	$getthevalueofid = $_GET['id'];
 	echo($getthevalueofid);
 	$c ="";
 	foreach($_POST['optradio'] as $option_num => $option_val){
