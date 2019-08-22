@@ -62,7 +62,7 @@
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript"> 
-xmlhttp.open("GET","getvalue.php?id="+id,true);
+xmlhttp.open("GET","getvalue.php?id="+'test');
 xmlhttp.send(); 
 var url;
 var id_d = 'data';
