@@ -64,6 +64,7 @@
 <script type="text/javascript"> 
   
   var url;
+var id = "data";
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'ddumb92d7', 
   uploadPreset: 'vqqpvdfw'}, (error, result) => { 
@@ -76,9 +77,7 @@ var myWidget = cloudinary.createUploadWidget({
 )
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
-  }, false);
-var id = "data"	
-	
+  }, false);	
 </script>  
 
  <?php 
