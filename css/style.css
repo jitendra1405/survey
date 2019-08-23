@@ -39,8 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: "cooper hewitt";
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -215,7 +214,21 @@ h6 {
   height: 100vh;
   position: relative;
   background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
-  background-size: cover;
+ /* background-size: cover;*/
+  background-position: 30%;
+}
+
+.customer-s{
+	background: #f5f8fd url("../img/cs.jpg") center top no-repeat;
+	background-size: cover;
+}
+.business-s{
+	background: #f5f8fd url("../img/business.jpg") center top no-repeat;
+	background-size: cover;
+}
+.customer-r{
+	background: #f5f8fd url("../img/cr.jpg") center top no-repeat;
+	background-size: cover;
 }
 
 #intro .intro-info h2 {
@@ -223,10 +236,11 @@ h6 {
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
+  line-height: 65px;
 }
 
 #intro .intro-info h2 span {
-  color: #1bb1dc;
+  color: #fff;
 }
 
 #intro .intro-info .btn-get-started,
@@ -277,21 +291,44 @@ h6 {
 .main-nav a {
   display: block;
   position: relative;
-  color: #413e66;
+  color: #fff;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 600;
 }
-
+/*
 .main-nav a:hover,
 .main-nav .active > a,
 .main-nav li:hover > a {
-  color: #1bb1dc;
+  color: #fff;
   text-decoration: none;
+      text-transform: capitalize;
 }
+*/
+#header.header-scrolled .main-nav a {
+  display: block;
+  position: relative;
+  color: #333;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+#header.header-scrolled .main-nav a:hover,
+.main-nav .active > a,
+.main-nav li:hover > a {
+  color: #444;
+  text-decoration: none;
+      text-transform: capitalize;
+}
+
+
 
 .main-nav .drop-down ul {
   display: block;
@@ -305,6 +342,7 @@ h6 {
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: ease all 0.3s;
+  text-transform: capitalize;
 }
 
 .main-nav .drop-down:hover > ul {
@@ -730,7 +768,10 @@ h6 {
 --------------------------------*/
 
 #features {
-  padding: 80px 0;
+  padding: 20px 0;
+}
+#search-box {
+  padding: 30px 0;
 }
 
 #features h4 {
@@ -885,6 +926,9 @@ h6 {
 
 #testimonials {
   padding: 60px 0;
+      background: #ffffff url(../img/testimo_back.jpg) center top no-repeat;
+    background-attachment: fixed;
+    color: #fff;
 }
 
 #testimonials .section-header {
@@ -1023,7 +1067,7 @@ h6 {
 --------------------------------*/
 
 #clients {
-  padding: 60px 0;
+  padding: 35px 0;
 }
 
 #clients img {
@@ -1566,4 +1610,9 @@ h6 {
   #footer .footer-top .social-links a {
     margin-bottom: 25px;
   }
+}
+
+.sh-box {
+    background-position: center center;
+    box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
 }
